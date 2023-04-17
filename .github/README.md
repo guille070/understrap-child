@@ -46,6 +46,13 @@ With ACF I made custom selection fields to select the primary and secondary type
 
 If you change one of these values in the ACF fields, after saving the post, it links the selected values with the terms to maintain the relationship between post and terms.
 
+### Generator
+When executing this functionality, first we check if the pokemon already exists in the database by performing a query to obtain a post with the same slug (for this we use the name of the Pokemon obtained in the API request).
+
+If the post already exists its information and taxonomies (Types, Versions and Attacks) will be updated. Otherwise a new post will be created with all the data.
+
+In addition, in each request the terms of each taxonomy are inserted or updated (if they already exist) with the information of the Pokemon obtained, and then linked to the post.
+
 ## Answers about DAPI and Traffic
 ### DAPI implementation
 It would be possible, but a new Class would have to be added with all the requests to this API. It could be also modify the existing API class to adapt it, but I think it would be better to have it separately.
