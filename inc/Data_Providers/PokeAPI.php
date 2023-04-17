@@ -154,7 +154,7 @@ class PokeAPI {
 
         foreach ($flavor_text_entries as $flavor_text) {
             if ($flavor_text['language']['name'] == $this->which_lang) {
-                return preg_replace( '/(^|[^\n\r])[\r\n](?![\n\r])/', '', $flavor_text['flavor_text']);
+                return $flavor_text['flavor_text'];
             }
         }
 
