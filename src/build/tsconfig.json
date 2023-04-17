@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "declaration": false,
+    "outDir": "../js",
+    "strict": true,
+  },
+  "include": ["../js/ts/"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
