@@ -5,10 +5,10 @@ Child theme development based on [Understrap Child starter](https://docs.underst
 ## Installation
 
 - Install a fresh copy of [Wordpress](https://wordpress.org/download/).
-- It's assumed that you had installed the [Understrap parent theme](https://understrap.com/).
+- It's assumed that you have installed the [Understrap parent theme](https://understrap.com/).
 - [Advanced Custom Fields](https://www.advancedcustomfields.com/) plugin is required in this development to manage custom meta fields. Please install and activate it.
 
-Install dependencies in child theme (understrap-child/):
+- Install dependencies in child theme (understrap-child/). This may take some time:
 
 ```bash
 npm install
@@ -17,6 +17,7 @@ npm install
 ```bash
 composer install
 ```
+- Activate the child theme.
 
 ## Usage
 

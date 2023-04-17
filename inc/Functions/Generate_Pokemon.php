@@ -137,9 +137,9 @@ class Generate_Pokemon {
     }
 
 
-    public static function set_object_terms( int $post_id, array $taxonomies ): bool|WP_Error {
+    public static function set_object_terms( int $post_id, $taxonomies ): bool|string {
 
-        if ( empty( $post_id ) || empty( $taxonomies ) ) {
+        if ( empty( $post_id ) || empty( $taxonomies ) || is_string( $taxonomies ) ) {
             return false;
         }
 
@@ -155,7 +155,7 @@ class Generate_Pokemon {
 
     }
 
-    public static function manage_taxonomies( $info ) {
+    public static function manage_taxonomies( $info ): array|string {
 
         if ( empty( $info ) ){
             return array();
