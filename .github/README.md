@@ -60,4 +60,4 @@ It would be possible, but a new Class would have to be added with all the reques
 It would also be necessary to create a new CPT to store the Digimon, or to create a taxonomy in the Pokemon CPT to differentiate them.
 
 ### Traffic
-I would use the Wordpress cache functions to store the API request responses. This way it would be faster and would not consume so many DB resources since the information is stored in cache.
+I would use the Wordpress cache functions to store the API request responses. This way it would be faster and would not consume so many DB resources since the information would be cached. It would be necessary to delete this cache from time to time to show the updated API information.
