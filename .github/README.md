@@ -30,7 +30,23 @@ composer install
 - List stored: wp-json/pokemon/v1/list
 - Get data: wp-json/pokemon/v1/get/{id}
 
-## Answers
+## Notes about development
+### Pokedex
+I never saw Pokemon, so there was some kind of information that I wasn't sure if it was correct. For example, to get the Pokedex version number and name (old and recent) I made a request to /pokemon and got the values of the 'game_indices' attribute.
+
+Then, I assumed that the information in index 0 is the oldest one, so for me that is the version number. To get the name of that version I made another request to the url of the 'url' attribute of the version in that index and got its name.
+
+For the recent versions I did the same process, but instead of getting the information from index 0 I assumed that the most recent version is in the last index of 'game_indices'.
+
+### Taxonomies
+When creating a pokemon manually or automatically, the Type (primary and secondary), Attacks and Version information is stored in taxonomies. There is one created for each. 
+
+I did this because all this information can be shared between several pokemon.
+With ACF I made custom selection fields to select the primary and secondary type. It could be made simpler by using the Yoast plugin that allows you to select primary terms in custom taxonomies. I did the same for the selection of Pokedex versions (old and recent).
+
+If you change one of these values in the ACF fields, after saving the post, it links the selected values with the terms to maintain the relationship between post and terms.
+
+## Answers about DAPI and Traffic
 ### DAPI implementation
 It would be possible, but a new Class would have to be added with all the requests to this API. It could be also modify the existing API class to adapt it, but I think it would be better to have it separately.
 
