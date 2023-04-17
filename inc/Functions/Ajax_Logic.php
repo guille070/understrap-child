@@ -31,7 +31,7 @@ class Ajax_Logic {
             wp_die();
         }
         
-        wp_die( wp_send_json_success($pokedex_old) );
+        wp_die( json_encode($pokedex_old) );
 
     }
 
